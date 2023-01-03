@@ -6,7 +6,7 @@ const port = process.env.PORT || 4000 ;
 require('./config')
 let bodyParser = require('body-parser');
 let jsonParser = bodyParser.json();
-const Students = require('../crudDataBase/StudentSchema');
+const Students = require('./StudentSchema');
 
 
 app.post('/studentsAdd', jsonParser, async (req, res) => {
