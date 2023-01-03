@@ -3,7 +3,7 @@ const app = express();
 const cors = require('cors');
 app.use(cors());
 const port = process.env.PORT || 4000 ;
-require('../crudDataBase/config');
+require('./config')
 let bodyParser = require('body-parser');
 let jsonParser = bodyParser.json();
 const Students = require('../crudDataBase/StudentSchema');
