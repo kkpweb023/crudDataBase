@@ -19,7 +19,7 @@ app.post('/studentsAdd', jsonParser, async (req, res) => {
         res.send("Email Required");
     } else {
         let data = new Students({
-
+            _id: Math.floor(Math.random() * 1000),
             name: req.body.name,
             age: req.body.age,
             email: req.body.email
