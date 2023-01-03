@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 app.use(cors());
+const port = process.env.PORT || 4000 ;
 require('../crudDataBase/config');
 let bodyParser = require('body-parser');
 let jsonParser = bodyParser.json();
@@ -61,6 +62,7 @@ app.put('/studentEdit/:_id', jsonParser, async (req, res) => {
 
 
 
+app.listen(port, () => {
+    console.log(`from port ${port}`)
 
-
-app.listen(4000);
+})
